@@ -4,7 +4,7 @@ import Button from "@/components/atoms/Button";
 
 const Header = ({ onMenuClick, title = "MedFlow" }) => {
   return (
-    <header className="bg-white/80 backdrop-blur-sm border-b border-secondary-200 px-6 py-4">
+<header className="bg-white/80 backdrop-blur-sm border-b border-secondary-200 px-6 py-4">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-4">
           <Button
@@ -42,6 +42,16 @@ const Header = ({ onMenuClick, title = "MedFlow" }) => {
               <p className="text-xs text-secondary-500">Administrator</p>
             </div>
           </div>
+          <Button 
+            variant="ghost" 
+            size="sm"
+            onClick={() => {
+              const { ApperUI } = window.ApperSDK;
+              ApperUI.logout();
+            }}
+          >
+            <ApperIcon name="LogOut" size={20} />
+          </Button>
         </div>
       </div>
     </header>
