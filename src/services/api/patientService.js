@@ -283,7 +283,6 @@ export const patientService = {
       return response.data || [];
     } catch (error) {
       console.error("Error searching patients:", error?.response?.data?.message || error);
-      return [];
 return [];
     }
   }
